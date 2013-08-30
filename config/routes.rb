@@ -1,11 +1,25 @@
 LawyerApp::Application.routes.draw do
-  get "static_pages/about"
-  get "static_pages/services"
-  get "static_pages/areas"
-  get "static_pages/clients"
-  get "static_pages/faq"
-  get "static_pages/contacts"
-  # The priority is based upon order of creation: first created -> highest priority.
+  
+  root  'static_pages#home'
+  match '/contacts',    to: 'static_pages#contacts',    via: 'get'
+  match '/services',   to: 'static_pages#services',   via: 'get'
+  
+
+
+
+
+  #get "static_pages/home"
+  #get "static_pages/services"
+  #get "static_pages/areas"
+  #get "static_pages/clients"
+  #get "static_pages/faq"
+  #get "static_pages/contacts"
+  
+
+
+
+
+# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
